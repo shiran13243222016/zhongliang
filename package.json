@@ -1,0 +1,21 @@
+{
+  "name": "0721",
+  "version": "1.0.0",
+  "description": "教学",
+  "main": "gulpfile.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "huaizhi",
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.5.0",
+    "gulp-connect-proxy": "^0.3.1",
+    "gulp-connect-reproxy": "0.0.98",
+    "gulp-sass-china": "^3.1.0",
+    "gulp-uglyfly": "^1.4.2"
+  }
+}

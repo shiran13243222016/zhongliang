@@ -1,0 +1,1 @@
+function fn(){console.log("hello world")}function fn(){console.log("向世界问好")}
