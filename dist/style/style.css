@@ -1,2 +1,229 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
 body {
-  background: #DDDDDD; }
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+ul, ol {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  color: #606060; }
+
+body {
+  width: 100%; }
+
+.nav {
+  width: 1519px;
+  height: 100px; }
+
+.nav a {
+  display: block;
+  height: 100px; }
+  .nav a img {
+    width: 100%;
+    height: 100%; }
+
+.fuwu {
+  width: 110px;
+  height: 130px;
+  border: 1px solid #000; }
+
+.warp {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  left: 0;
+  top: 0; }
+
+.top-div {
+  width: 1210px;
+  height: 30px;
+  background: #f5f5f5;
+  font-size: 12px;
+  margin: 0 auto;
+  position: relative; }
+  .top-div .top-ul {
+    float: left;
+    line-height: 30px; }
+    .top-div .top-ul li {
+      float: left;
+      padding: 0 5px;
+      position: relative; }
+    .top-div .top-ul .changsha {
+      display: none;
+      width: 380px;
+      height: 180px;
+      position: absolute;
+      left: 89px;
+      top: 25px;
+      border: 1px solid #000;
+      z-index: 1; }
+      .top-div .top-ul .changsha li {
+        float: left; }
+      .top-div .top-ul .changsha button {
+        position: absolute;
+        bottom: 5px;
+        left: 20px; }
+    .top-div .top-ul .hover:hover {
+      color: limegreen; }
+  .top-div .top-ol {
+    float: right;
+    line-height: 30px; }
+    .top-div .top-ol li {
+      float: left;
+      padding: 0 5px; }
+    .top-div .top-ol .hover:hover {
+      color: limegreen; }
+
+.top1-div {
+  width: 100%;
+  height: 30px;
+  background: #f5f5f5; }
+
+.top2-div {
+  width: 1210px;
+  height: 80px;
+  margin: 36px auto; }
+  .top2-div div {
+    display: inline-block; }
+  .top2-div .a-div {
+    margin-right: 58px; }
+  .top2-div .b-div {
+    width: 635px;
+    display: inline-block;
+    margin-right: 135px; }
+    .top2-div .b-div .ipt {
+      width: 590px;
+      height: 42px;
+      border: 2px solid #c20001;
+      position: relative;
+      float: left; }
+      .top2-div .b-div .ipt i {
+        font-size: 16px;
+        display: inline-block;
+        width: 30px;
+        text-align: center;
+        line-height: 42px;
+        float: left; }
+      .top2-div .b-div .ipt .opt {
+        display: inline-block;
+        width: 490px;
+        height: 39px;
+        float: left;
+        border: 0; }
+      .top2-div .b-div .ipt a {
+        display: inline-block;
+        background: red;
+        color: #fff;
+        width: 70px;
+        height: 42px;
+        font-size: 18px;
+        text-align: center;
+        line-height: 38px;
+        float: left; }
+    .top2-div .b-div .s-div {
+      text-align: center;
+      height: 42px;
+      width: 40px; }
+      .top2-div .b-div .s-div a {
+        display: inline-block;
+        font-size: 14px;
+        margin-top: 10px; }
+    .top2-div .b-div .u-div {
+      font-size: 12px; }
+      .top2-div .b-div .u-div a {
+        margin-right: 10px; }
+
+.top3-div {
+  width: 1210px;
+  height: 44px;
+  margin: 0 auto; }
+  .top3-div h3 {
+    float: left;
+    font-size: 14px;
+    padding: 15px 57px;
+    color: #fff;
+    background: #2d8800; }
+  .top3-div ul {
+    float: left;
+    margin-left: 10px; }
+    .top3-div ul li {
+      float: left;
+      margin: 15px 11px 11px; }
+      .top3-div ul li a {
+        font-size: 14px;
+        color: #383733; }
+  .top3-div .gouwu3 {
+    float: right;
+    position: relative; }
+    .top3-div .gouwu3 .gouwu {
+      padding: 13px 20px 11px;
+      font-size: 12px;
+      background: #ddd; }
+      .top3-div .gouwu3 .gouwu i {
+        margin: 0 5px; }
+    .top3-div .gouwu3 .gouwu2 {
+      width: 300px;
+      height: 150px;
+      border: 1px solid #000;
+      position: absolute;
+      right: 0;
+      top: 44px; }
+      .top3-div .gouwu3 .gouwu2 span {
+        display: block;
+        margin: 10px 100px; }
+      .top3-div .gouwu3 .gouwu2 p {
+        font-size: 12px;
+        margin-left: 50px; }
+        .top3-div .gouwu3 .gouwu2 p a {
+          margin: 20px 0 0 50px;
+          display: block;
+          color: #C20001; }
+
+.clear:after {
+  content: "";
+  clear: both;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden; }
