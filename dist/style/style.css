@@ -181,7 +181,7 @@ body {
   .top3-div h3 {
     float: left;
     font-size: 14px;
-    padding: 15px 57px;
+    padding: 16px 57px;
     color: #fff;
     background: #2d8800; }
   .top3-div ul {
@@ -193,6 +193,8 @@ body {
       .top3-div ul li a {
         font-size: 14px;
         color: #383733; }
+        .top3-div ul li a:hover {
+          color: #2D8800; }
   .top3-div .gouwu3 {
     float: right;
     position: relative; }
@@ -219,6 +221,115 @@ body {
           margin: 20px 0 0 50px;
           display: block;
           color: #C20001; }
+
+.scrollImg {
+  width: 1519px;
+  height: 450px;
+  position: relative; }
+  .scrollImg .imgs {
+    border-top: 3px solid #2D8800; }
+    .scrollImg .imgs li {
+      width: 1519px;
+      height: 450px;
+      position: absolute; }
+      .scrollImg .imgs li a img {
+        position: absolute;
+        top: 0;
+        left: 353px; }
+  .scrollImg .imgnav {
+    height: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 600px; }
+    .scrollImg .imgnav li {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: rgba(241, 200, 180, 0.6);
+      float: left;
+      margin-right: 10px; }
+      .scrollImg .imgnav li.active {
+        background: #000; }
+  .scrollImg #btn {
+    position: absolute;
+    width: 800px;
+    height: 60px;
+    left: 353px;
+    top: 210px; }
+    .scrollImg #btn span {
+      display: inline-block;
+      background: rgba(0, 0, 0, 0.6);
+      width: 40px;
+      height: 60px;
+      text-align: center;
+      line-height: 60px;
+      color: #fff; }
+      .scrollImg #btn span:first-of-type {
+        float: left; }
+      .scrollImg #btn span:last-of-type {
+        float: right; }
+
+.banner {
+  position: relative; }
+
+.banner_l {
+  width: 200px;
+  height: 440px;
+  background: #2D8800;
+  color: #bedaaa;
+  padding: 10px 0 0 0;
+  position: absolute;
+  left: 153px;
+  top: 3px; }
+  .banner_l .a_li h3 {
+    padding: 13px 20px; }
+    .banner_l .a_li h3.hover {
+      background: #fff;
+      color: #000; }
+      .banner_l .a_li h3.hover a {
+        color: #000; }
+    .banner_l .a_li h3 a {
+      margin-left: 18px;
+      font-size: 13px;
+      color: #fff; }
+  .banner_l .a_li .a_div {
+    display: none;
+    background: #fff;
+    width: 1000px;
+    height: 450px;
+    position: absolute;
+    left: 200px;
+    top: 0; }
+    .banner_l .a_li .a_div div {
+      display: inline-block;
+      height: 26px;
+      width: 966px;
+      padding: 17px; }
+      .banner_l .a_li .a_div div h4 {
+        color: #000;
+        display: inline-block;
+        float: left;
+        font-size: 16px;
+        width: 125px;
+        text-align: right;
+        margin-right: 13px; }
+      .banner_l .a_li .a_div div .a_ul {
+        float: left;
+        border-bottom: 1px solid #ddd; }
+        .banner_l .a_li .a_div div .a_ul li {
+          float: left;
+          font-size: 14px;
+          padding: 18px 0; }
+          .banner_l .a_li .a_div div .a_ul li a {
+            border-left: 1px solid #ddd;
+            display: inline-block;
+            height: 14px;
+            padding: 0 11px;
+            color: #757575; }
+            .banner_l .a_li .a_div div .a_ul li a.hower {
+              color: red; }
+            .banner_l .a_li .a_div div .a_ul li a:hover {
+              color: #2D8800; }
 
 .clear:after {
   content: "";
