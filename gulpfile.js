@@ -28,7 +28,11 @@ gulp.task("script",()=>{
            .pipe(uglyfly()) // 用插件 压缩插件;
            .pipe(gulp.dest("dist/scripts"));
 })
-
+// json 文件 上传线上
+gulp.task("json",()=>{
+	return gulp.src("jsons/*.json")
+			.pipe(gulp.dest("dist/jsons"));
+})
 gulp.task('index',function(){
     return gulp.src('index.html').pipe(gulp.dest('dist')).pipe(connect.reload());
 });
