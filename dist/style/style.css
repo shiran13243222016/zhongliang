@@ -424,107 +424,106 @@ body {
       text-align: center;
       line-height: 40px; }
 
-.section {
-  height: 7750px; }
-  .section .one {
-    width: 1210px;
-    height: 370px;
-    margin: 0 auto;
-    background: #fff;
-    position: relative; }
-    .section .one .lrbtn {
-      position: absolute;
-      left: 242px;
-      top: 205px;
-      width: 968px;
+.one {
+  width: 1210px;
+  height: 370px;
+  margin: 0 auto;
+  background: #fff;
+  position: relative; }
+  .one .lrbtn {
+    position: absolute;
+    left: 242px;
+    top: 205px;
+    width: 968px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 40px; }
+    .one .lrbtn .first {
+      display: inline-block;
+      background: rgba(0, 0, 0, 0.5);
+      float: left;
+      width: 30px;
+      height: 40px; }
+    .one .lrbtn .second {
+      display: inline-block;
+      background: rgba(0, 0, 0, 0.5);
+      width: 30px;
       height: 40px;
-      text-align: center;
-      line-height: 40px;
-      font-size: 40px; }
-      .section .one .lrbtn .first {
-        display: inline-block;
-        background: rgba(0, 0, 0, 0.5);
-        float: left;
-        width: 30px;
-        height: 40px; }
-      .section .one .lrbtn .second {
-        display: inline-block;
-        background: rgba(0, 0, 0, 0.5);
-        width: 30px;
-        height: 40px;
-        float: right; }
-    .section .one h3 {
-      height: 50px;
-      font-size: 18px;
-      color: #2a3f3a;
-      line-height: 50px; }
-    .section .one .odiv {
-      border-top: 2px solid #2D8703;
-      height: 320px;
-      width: 1210px;
-      position: relative;
+      float: right; }
+  .one h3 {
+    height: 50px;
+    font-size: 18px;
+    color: #2a3f3a;
+    line-height: 50px; }
+  .one .odiv {
+    border-top: 2px solid #2D8703;
+    height: 320px;
+    width: 1210px;
+    position: relative;
+    z-index: 0;
+    overflow: hidden; }
+    .one .odiv .ctn {
+      display: inline-block;
+      width: 242px;
+      position: absolute;
+      z-index: 1; }
+      .one .odiv .ctn img {
+        width: 242px; }
+    .one .odiv ul {
       z-index: 0;
-      overflow: hidden; }
-      .section .one .odiv .ctn {
-        display: inline-block;
-        width: 242px;
-        position: absolute;
-        z-index: 1; }
-        .section .one .odiv .ctn img {
-          width: 242px; }
-      .section .one .odiv ul {
-        z-index: 0;
-        display: inline-block;
-        width: 2270px;
+      display: inline-block;
+      width: 2270px;
+      height: 320px;
+      position: absolute;
+      overflow: hidden;
+      left: 245px;
+      top: 0; }
+      .one .odiv ul li {
+        width: 240px;
         height: 320px;
-        position: absolute;
-        overflow: hidden;
-        left: 245px;
-        top: 0; }
-        .section .one .odiv ul li {
-          width: 240px;
-          height: 320px;
-          display: inline-block;
-          border-right: 4px solid #ddd;
-          float: left; }
-          .section .one .odiv ul li div {
-            text-align: center;
-            font-size: 16px; }
-            .section .one .odiv ul li div .pp {
-              background: #f1f7f5;
-              width: 240px;
-              height: 100px;
-              padding: 10px  0; }
-            .section .one .odiv ul li div img {
-              margin: 15px 0;
-              width: 180px;
-              height: 180px; }
-            .section .one .odiv ul li div .p1 {
-              background: #f1f7f5; }
-            .section .one .odiv ul li div .p2 {
-              padding: 0 17px;
-              margin-top: 30px;
-              background: #f1f7f5; }
-              .section .one .odiv ul li div .p2 span {
-                float: left;
-                color: red; }
-              .section .one .odiv ul li div .p2 .btn {
-                display: inline-block;
-                float: right;
-                width: 80px;
-                height: 26px;
-                text-align: center;
-                background: #fb8809;
-                line-height: 26px;
-                color: #fff; }
+        display: inline-block;
+        border-right: 4px solid #ddd;
+        float: left; }
+        .one .odiv ul li div {
+          text-align: center;
+          font-size: 16px; }
+          .one .odiv ul li div .pp {
+            background: #f1f7f5;
+            width: 240px;
+            height: 100px;
+            padding: 10px  0; }
+          .one .odiv ul li div img {
+            margin: 15px 0;
+            width: 180px;
+            height: 180px; }
+          .one .odiv ul li div .p1 {
+            background: #f1f7f5; }
+          .one .odiv ul li div .p2 {
+            padding: 0 17px;
+            margin-top: 30px;
+            background: #f1f7f5; }
+            .one .odiv ul li div .p2 span {
+              float: left;
+              color: red; }
+            .one .odiv ul li div .p2 .btn {
+              display: inline-block;
+              float: right;
+              width: 80px;
+              height: 26px;
+              text-align: center;
+              background: #fb8809;
+              line-height: 26px;
+              color: #fff; }
 
 .LoutiNav {
   width: 90px;
   height: 540px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.8);
   position: fixed;
-  left: 120px;
-  top: 120px; }
+  left: 63px;
+  top: 120px;
+  display: none; }
   .LoutiNav li {
     text-align: center;
     border-bottom: 1px solid #ddd; }
@@ -546,59 +545,257 @@ body {
   width: 100%; }
   .Louti .LoutiA {
     width: 1210px;
-    height: 500px;
-    background: #000;
+    height: 465px;
     margin: 0 auto; }
+    .Louti .LoutiA h3 {
+      font-size: 18px;
+      border-bottom: 2px solid #3da601;
+      height: 52px;
+      line-height: 52px; }
+    .Louti .LoutiA ul {
+      display: inline-block; }
+      .Louti .LoutiA ul li {
+        float: left; }
+        .Louti .LoutiA ul li a img {
+          display: inline-block;
+          float: left; }
   .Louti .LoutiB {
     width: 1210px;
-    background: #2A3F3A;
     margin: 0 auto;
-    height: 500px; }
+    height: 510px;
+    position: relative;
+    overflow: hidden; }
+    .Louti .LoutiB h3 {
+      font-size: 18px;
+      border-bottom: 2px solid #3da601;
+      height: 52px;
+      line-height: 52px;
+      color: #3f333d; }
+    .Louti .LoutiB .Bbul {
+      display: inline-block;
+      width: 2420px;
+      position: absolute; }
+      .Louti .LoutiB .Bbul li {
+        float: left;
+        overflow: hidden; }
+        .Louti .LoutiB .Bbul li img {
+          position: relative; }
+      .Louti .LoutiB .Bbul .firstOf {
+        width: 484px; }
+        .Louti .LoutiB .Bbul .firstOf img {
+          width: 494px; }
+      .Louti .LoutiB .Bbul .otherOf {
+        width: 242px; }
+        .Louti .LoutiB .Bbul .otherOf img {
+          width: 252px; }
+    .Louti .LoutiB ol {
+      position: absolute;
+      left: 0;
+      top: 160px;
+      height: 40px;
+      width: 1210px; }
+      .Louti .LoutiB ol li {
+        background: rgba(0, 0, 0, 0.5);
+        text-align: center;
+        line-height: 40px; }
+      .Louti .LoutiB ol .first {
+        float: left; }
+      .Louti .LoutiB ol .second {
+        float: right; }
+    .Louti .LoutiB .Bul {
+      position: absolute;
+      left: 0;
+      top: 400px; }
+      .Louti .LoutiB .Bul li {
+        float: left; }
+        .Louti .LoutiB .Bul li img {
+          display: inline-block; }
   .Louti .LoutiC {
     width: 1210px;
-    background: #2D8703;
     margin: 0 auto;
-    height: 500px; }
+    height: 681px; }
+    .Louti .LoutiC h3 {
+      font-size: 18px;
+      border-bottom: 2px solid #7ca1e5;
+      height: 55px;
+      line-height: 55px;
+      color: #7ca1e5; }
+      .Louti .LoutiC h3 span:nth-of-type(1) {
+        margin-right: 180px; }
+      .Louti .LoutiC h3 span:nth-of-type(2), .Louti .LoutiC h3 span:nth-of-type(3) {
+        padding: 15px 8px;
+        margin-right: 15px; }
+      .Louti .LoutiC h3 .shover {
+        border-bottom: 2px solid #7ca1e5; }
+    .Louti .LoutiC .bigdiv {
+      height: 626px;
+      position: relative; }
+      .Louti .LoutiC .bigdiv .lefta {
+        display: inline-block;
+        float: left;
+        width: 242px;
+        height: 505px; }
+        .Louti .LoutiC .bigdiv .lefta img {
+          width: 242px;
+          height: 626px; }
+      .Louti .LoutiC .bigdiv ul {
+        position: absolute;
+        width: 966px;
+        height: 626px;
+        display: inline-block;
+        left: 242px;
+        top: 0;
+        float: left; }
+        .Louti .LoutiC .bigdiv ul.unone {
+          display: none; }
+        .Louti .LoutiC .bigdiv ul li {
+          float: left;
+          width: 240px;
+          height: 312px;
+          border-bottom: 1px solid #000;
+          border-right: 1px solid #000; }
+          .Louti .LoutiC .bigdiv ul li a img {
+            width: 225px;
+            height: 225px;
+            margin: 8px 8px; }
+          .Louti .LoutiC .bigdiv ul li a img:hover {
+            left: 100px; }
+          .Louti .LoutiC .bigdiv ul li p {
+            font-size: 14px;
+            margin: 14px 0;
+            text-indent: 32px; }
+          .Louti .LoutiC .bigdiv ul li span {
+            color: red;
+            text-indent: 32px;
+            display: block; }
+      .Louti .LoutiC .bigdiv ol {
+        display: inline-block;
+        width: 966px;
+        height: 626px;
+        position: absolute;
+        left: 242px;
+        top: 0; }
+        .Louti .LoutiC .bigdiv ol li {
+          float: left;
+          width: 240px;
+          height: 312px;
+          border-bottom: 1px solid #000;
+          border-right: 1px solid #000; }
+          .Louti .LoutiC .bigdiv ol li a img {
+            width: 225px;
+            height: 225px;
+            margin: 8px 8px; }
+          .Louti .LoutiC .bigdiv ol li p {
+            font-size: 14px;
+            margin: 14px 0;
+            text-indent: 32px; }
+          .Louti .LoutiC .bigdiv ol li span {
+            color: red;
+            display: block;
+            text-indent: 32px; }
   .Louti .LoutiD {
     width: 1210px;
-    background: #2D8800;
-    margin: 0 auto;
-    height: 500px; }
+    margin: 0 auto; }
   .Louti .LoutiE {
     width: 1210px;
-    background: #32CD32;
-    margin: 0 auto;
-    height: 500px; }
+    margin: 0 auto; }
   .Louti .LoutiF {
     width: 1210px;
-    background: #383733;
-    margin: 0 auto;
-    height: 500px; }
+    margin: 0 auto; }
   .Louti .LoutiG {
     width: 1210px;
-    background: #5A5A5A;
-    margin: 0 auto;
-    height: 500px; }
+    margin: 0 auto; }
   .Louti .LoutiH {
     width: 1210px;
-    background: #5C5C5C;
-    margin: 0 auto;
-    height: 500px; }
+    margin: 0 auto; }
   .Louti .LoutiI {
     width: 1210px;
-    background: #606060;
-    margin: 0 auto;
-    height: 500px; }
+    margin: 0 auto; }
   .Louti .LoutiJ {
     width: 1210px;
-    background: #757575;
-    margin: 0 auto;
-    height: 500px; }
+    margin: 0 auto; }
   .Louti .LoutiK {
     width: 1210px;
-    background: #BEDAAA;
+    margin: 0 auto; }
+
+.divfoot {
+  width: 100%; }
+  .divfoot .footer {
+    width: 1210px;
+    height: 730px;
     margin: 0 auto;
-    height: 500px; }
+    border-top: 2px solid #3da601; }
+    .divfoot .footer .sec {
+      width: 240px;
+      height: 365px;
+      border-bottom: 1px solid #ddd;
+      border-right: 1px solid #ddd;
+      float: left; }
+      .divfoot .footer .sec h3 {
+        font-size: 16px;
+        margin-left: 89px;
+        color: #82665a;
+        line-height: 75px;
+        font-weight: 600; }
+      .divfoot .footer .sec .pic {
+        height: 120px; }
+        .divfoot .footer .sec .pic img {
+          display: block;
+          margin: 30px auto; }
+      .divfoot .footer .sec .clearfix li {
+        float: left;
+        font-size: 12px;
+        margin-bottom: 14px;
+        width: 80px;
+        margin-left: 30px; }
+
+.foo {
+  width: 1518px;
+  height: 250px;
+  background: #f7f7f7;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 2px solid #64b535; }
+  .foo ul {
+    width: 1200px;
+    height: 250px;
+    margin: 0 auto; }
+    .foo ul li {
+      margin-left: 50px;
+      margin-top: 20px;
+      font-size: 16px;
+      width: 150px;
+      float: left;
+      margin-right: 5px; }
+      .foo ul li h3 {
+        font-weight: 600; }
+      .foo ul li a {
+        margin-top: 20px;
+        display: block; }
+
+.ende {
+  height: 295px;
+  width: 1518px; }
+  .ende ul {
+    width: 820px;
+    height: 80px;
+    margin: 30px auto; }
+    .ende ul li {
+      float: left;
+      font-size: 14px;
+      padding-left: 20px;
+      border-right: 1px solid #ba99b8; }
+      .ende ul li a {
+        margin-right: 20px; }
+  .ende img {
+    display: inline-block;
+    float: left;
+    margin-left: 350px; }
+  .ende div {
+    float: left;
+    font-size: 12px; }
+    .ende div span {
+      display: block;
+      color: #919ec1; }
 
 .clear:after {
   content: "";

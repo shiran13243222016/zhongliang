@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.bigdiv {
+  width: 100%; }
+
+.nav {
+  margin: 0 auto;
+  background: red;
+  width: 1260px;
+  height: 115px;
+  border: 2px double #43a41b; }
+  .nav a {
+    display: inline-block; }

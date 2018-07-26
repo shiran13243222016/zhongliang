@@ -34,11 +34,11 @@ gulp.task("json",()=>{
 			.pipe(gulp.dest("dist/jsons"));
 })
 gulp.task('index',function(){
-    return gulp.src('index.html').pipe(gulp.dest('dist')).pipe(connect.reload());
+    return gulp.src('html/*.html').pipe(gulp.dest('dist/')).pipe(connect.reload());
 });
 
 gulp.task("watch",function(){
-    gulp.watch("index.html",["index"])
+    gulp.watch("html/*.html",["index"])
     gulp.watch("scss/*.scss",["sass"])
 })
 
