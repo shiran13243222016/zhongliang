@@ -4,20 +4,26 @@
 }
 .bigdiv{
     width:100%;
+    font-size:12px;
+    background:#000;
 }
 .nav{
     margin:0 auto;
     background:red;
-    width:1260px;
+    width:1000px;
     height:115px;
     border:2px double #43a41b;
     a{
-        display:inline-block;
+        float:left;
+        width:207px;
         img{
             
         }
     }
-    h3{
-        
+    p{
+        float:left;
+        display:block;
+        width:200px;
+        height:20px;
     }
 }
