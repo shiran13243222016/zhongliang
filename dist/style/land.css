@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.nav {
+  width: 1000px;
+  height: 120px;
+  margin: 0 auto;
+  border-bottom: 3px solid #2D8800; }
+  .nav a {
+    display: inline-block;
+    margin-top: 30px; }
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative; }
+  .container img {
+    display: block;
+    margin: 0 auto; }
+
+.mav {
+  position: absolute;
+  width: 480px;
+  height: 500px;
+  background: #f7f8f8;
+  border: 2px solid #ebebeb;
+  left: 735px;
+  top: 200px; }

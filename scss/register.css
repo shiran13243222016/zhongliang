@@ -53,14 +53,12 @@ a{
 	background:#fff;
 	padding-left:15px;
 }
-.container div{
-	
-}
 .idiv input{
 	text-indent:26px;
 	width:350px;
 	height:45px;
 	border:1px solid #cccccc;
+	outline:none;
 }
 .abn{
 	color:#fff;
@@ -73,12 +71,29 @@ a{
 	line-height:44px;
 	margin-top:20px;
 }
-.idiv p{
-	
-}
-.visib{
-	padding:5px 20px ;
+.idiv label{
+	padding:0 20px;
 	border:1px solid #ff8080;
 	color:#ff8080;
 	background:#fee6e7;
+	display:block;
+	}
+	.btna{
+	padding:14px 10px;
+	display:inline-block;
+	margin-left:30px;
+	background:#43a41b;
+	font-size:16px;
+	color:#fff;
+
+}
+#phone{
+	width:194px;
+	margin-bottom:20px;
+
+}
+#radiod{
+	width:16px;
+	height:16px;
+	margin-right:10px;
 }

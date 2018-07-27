@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<!--<link rel="stylesheet" href="style/register.css" />-->
-		<link rel="stylesheet" href="../scss/register.css" />
+		<link rel="stylesheet" href="style/register.css" />
 	</head>
 	<body>
 		<div class="bigdiv">
@@ -16,35 +16,35 @@
 			</div>
 			<div class="second">
 				<img src="https://passport.womai.com/upload/2015/11/2/20151102101856501.jpg" alt="" />
-				<div class="container">
-					
+				<div class="container">			
 					<div class="idiv">
-						<label style="visibility:visible;display:inline-block" class="visib">请输入正确的邮箱或手机</label><br>
-						<input type="text" id="email" placeholder="邮箱/手机"/>
+						<label for="email" style="visibility:hidden">邮箱格式错误</label>
+						<input type="text" id="email" placeholder="邮箱" data-valid="valideEmail"/>
 					</div>
 					<div class="idiv">
-						<label style="visibility:hidden">用户名是由小写英文字母.数字.下划线组成</label>
-						<input type="text" id="usr" placeholder="用户名"/>
+						<label for="usr" style="visibility:hidden">请输入中文，英文，字母，_-的4-20位的用户名</label>
+						<input type="text" id="usr" placeholder="用户名" data-valid="valideUsrStr"/>
 					</div>
 					<div class="idiv">
-						<label style="visibility:hidden">密码长度必须为8-16个字符</label>
-						<input type="password" id="pwd" placeholder="设置密码"/>
+						<label for="pwd" style="visibility:hidden">请输入长度6-20位的密码</label>
+						<input type="password" id="pwd" placeholder="设置密码" data-valid="validePwd"/>
 					</div>
 					<div class="idiv">
-						<label style="visibility:hidden">两次输入的密码不一致，请重新输入</label>
-						<input type="password" id="qwd" placeholder="确认密码"/>
+						<label for="qwd" style="visibility:hidden">密码不一致请确认密码</label>
+						<input type="password" id="qwd" placeholder="确认密码" data-valid="valideqPwd"/>
 					</div>
 					<div class="idiv">
-						<label style="visibility:hidden">输入错误</label>
-						<input type="text" id="phone" placeholder="手机验证码"/><a href="##" onclick=AclickEvent() style="font-size:16px;color:#fff">发送验证码</a>
+						<label for="phone" style="visibility:hidden">输入错误</label>
+						<input type="text" id="phone" placeholder="手机验证码" data-valid="validePhone" /><a href="##"  class="btna">发送验证码</a>
 					</div>
 					<div class="idiv">
-						<input type="radio" name="" style="width:16px;height:16px;margin-right:10px"/><span>我已阅读并同意</span><a href="javascript:void(0)">《我买网网上商城服务条款》</a>
+						<input type="radio" name="" id="radiod" checked/><span>我已阅读并同意</span><a href="javascript:void(0)">《我买网网上商城服务条款》</a>
 					</div>
 					<div class="idiv">
 						<a class="abn" href="javascript:void(0)">立即注册</a>
 					</div>
 				</div>
+				
 			</div>
 		</div>		
 	</body>
@@ -53,103 +53,102 @@
 <script src="../JS/ajax.js"></script>
 <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 <script>
+	var flag = false;
 	// 策略模式值表单验证
 	var aInput = document.querySelectorAll("[id]");
 	var valideStrategy ={
 		valideUsrStr:function(){
 			var reg = /^[\u4e00-\u9fa5a-z0-9_-]{4,20}$/i;
-			var str = this.value;
-			
+			var str = this.value;			
 			if( reg.test(str) ){
-				renderLabel( this, "hide",true,"格式正确" );
+				renderLabel( this, "hidden",true);
+				flag = true;
 			}else{
-				renderLabel( this, "show",false,"请输入中文，英文，字母，_-的4-20位的用户名" );
+				renderLabel( this, "visible",false);
+				flag = false;
 			}
 		},
 		validePwd : function(){
 			var reg = /^[\!\@\$\%\^\&\*\-a-z0-9]{6,20}$/i;
 			var str = this.value;
-			var strength = 0;
 			// 判断密码
 			if(reg.test(str)){
-				renderLabel( this, "hide",true,"格式正确" );
+				renderLabel( this, "hidden",true,);
+				flag = true;
 			}else{
-				renderLabel( this, "show",false,"请输入长度6-20位的密码" );
+				renderLabel( this, "visible",false,);
+				flag = false;
 			}		
-			//判断密码等级
-			var regNumber = /\d/g;
-			if(reg.test(str)){
-				strength++ ;
-			}
-			
-			var regWord = /\w/gi;
-			if(reg.test(str)){
-				strength++ ;
-			}
-			
-			var regTocken = /\@\!\#\%\^\&\$/g;
-			if(reg.test(str)){
-				strength++ ;
-			}
-			if( strength == 3 ){
-				renderLabel( this, "hide",true,"密码程度强" );
-			}else{
-				renderLabel( this, "show",false,"密码存在被盗风险，建议使用数字字母特殊字符组合设置密码" );
-			}
-			},
-		vlideqPwd : function(){
-			var ptxt = aInput[1].value;
+		},
+		valideqPwd : function(){
+			var ptxt = aInput[2].value;
 			if(this.value == ptxt){
-				renderLabel( this, "hide",true,"密码正确" );
+				renderLabel( this, "hidden",true);
+				flag = true;
 			}else{
-				renderLabel( this, "show",false,"密码不一致请确认密码" );
+				renderLabel( this, "visible",false);
+				flag = false;
 			}
 		},
-		vlideEmail : function(){
+		valideEmail : function(){
 			var reg = /^\w{6,20}@[a-zA-Z]{2,5}\.[a-z]{2,7}$/ ;
 			var str = this.value ;
 			if(reg.test(str)){
-				renderLabel( this, "hide",true,"格式正确" );
+				renderLabel( this, "hidden",true);
+				flag = true;
 			}else{
-				renderLabel( this, "show",false,"请输入正确邮箱" );
+				renderLabel( this, "visible",false);
+				flag = false;
+			}
+		},
+		validePhone : function(){
+			var str = this.value;
+			if( str == this.nextElementSibling.innerHTML){
+				renderLabel( this, "hidden",true);
+				flag = true;
+			}else{
+				renderLabel( this, "visible",false);
+				flag = false;
 			}
 		}
 	}
-	// 表单验证： 当文本框获得焦点， 验证显示
-	//         当文本框失去焦点， 验证显示，如果输入正确，验证消失
-	
 	for(var i =0 ; i < aInput.length ; i++){
 		aInput[i].onfocus = function(){
-			renderLabel( this, "hidden",true )
+			renderLabel( this, "hidden",true)
 		}
 		aInput[i].onblur = function(){
 			renderLabel( this, "visible",false )
 		}
 		//这是策略模式的核心，同一串代码利用不同的属性来制造出不同的结果，这就是策略模式 。
-		//
 		aInput[i].addEventListener("blur",valideStrategy[aInput[i].getAttribute("data-valid")]);
 	}
 	
 	// 封装函数，判定获得焦点和失去焦点的 事件  ele -- 时间对象 ， show-- LABEL的状态  ， valide--LABEL 的判定结果
-	// 判定 label 
-	
-	function renderLabel(ele,show,valide,tip){
+	// 判定 label 	
+	function renderLabel(ele,show){
 		var idAttr = ele.id ;
 		var label = document.querySelector("label[for="+idAttr+"]");
-		if(show == "show"){
+		if(show == "visible"){
 			label.style.visibility = "visible";
-		}else if(show == "hide"){
+		}else if(show == "hidden"){
 			label.style.visibility = "hidden";
 		}
-		// 判断有没有做 label ；验证 ，且返回结果
-		if(valide === undefined) return 0 ;
+	}
+	
+	// 点击发送验证码
+	var aBtn = document.getElementsByClassName("btna")[0];
+	aBtn.onclick = function(){
+		var sNum = Math.random();
+		sNum = sNum.toString();
+		sNum = sNum.substr(2,6);
+		this.innerHTML = sNum ;
+	}
+	// 点击注册
+	var aBn = document.getElementsByClassName("abn")[0];
+	aBn.onclick = function(){
+		if(flag){
+			location.href = "land.html";
+		}
 		
-		if(valide){
-			label.className = "success";
-			label.innerHTML = tip;
-		}else{
-			label.className = "error";
-			label.innerHTML = tip ;
-		}	
 	}
 </script>
