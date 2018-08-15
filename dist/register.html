@@ -53,6 +53,9 @@
 <script src="../JS/ajax.js"></script>
 <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 <script>
+	
+// 表单验证 
+//<----------------------------------------------------------------------------------
 	var flag = false;
 	// 策略模式值表单验证
 	var aInput = document.querySelectorAll("[id]");
@@ -90,9 +93,6 @@
 				flag = false;
 			}
 		},
-		valideEmail : function(){
-			var reg = /^\w{6,20}@[a-zA-Z]{2,5}\.[a-z]{2,7}$/ ;
-			var str = this.value ;
 			if(reg.test(str)){
 				renderLabel( this, "hidden",true);
 				flag = true;
@@ -151,4 +151,19 @@
 		}
 		
 	}
+//<-----------------------------------------------------------------------------------------
+
+// 当点击注册按钮的时候，把用户注册的数据 存入数据库中
+	$(".abn").click(function(){
+		//  获取出所有文本框 内容
+		var email = $("#email").val() ;
+		var usr = $("#usr").val() ;
+		var pwd = $("#pwd").val() ;
+		var qwd = $("#qwd").val() ;
+		ajaxPost("php/register.php",`email=${email}&usr=${usr}&pwd=${qwd}&qwd=${qwd}`)
+		.then(function(res){
+			console.log(res);
+		})
+	})
+
 </script>

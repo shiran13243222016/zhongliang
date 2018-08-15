@@ -1,29 +1,99 @@
-*{
-    margin:0;
-    padding:0;
+* {
+  margin: 0;
+  padding: 0; }
+
+.bigdiv {
+  width: 100%;
+  font-size: 12px;
+ }
+a{
+    text-decoration:none;
 }
-.bigdiv{
-    width:100%;
-    font-size:12px;
-    background:#000;
-}
-.nav{
+.nav {
+  margin: 0 auto;
+  width: 1000px;
+  height: 98px;
+  border-bottom: 2px double #43a41b; 
+  padding-top:17px;}
+  .nav a {
+    float: left;
+    width: 210px;
+    height:80px;
+    
+     }
+  .nav a img{
+    
+    width: 210px;
+    height:80px;
+  }
+  .nav h3 {
+    float: left;
+    font-size:25px;
+    margin:25px 50px; }
+    
+.second{
+    width: 1000px;
+    height:587px;
     margin:0 auto;
-    background:red;
+    position:relative;
+}
+.second img{
     width:1000px;
-    height:115px;
-    border:2px double #43a41b;
-    a{
-        float:left;
-        width:207px;
-        img{
-            
-        }
+    height:500px;
+    display:inline-block;
+    position:absolute;
+}
+.second .container{
+    position:absolute;
+    left:595px;
+    top:30px;
+    width:365px;
+    height:500px;
+    display:inline-block;
+    background:#fff;
+    padding-left:15px;
+}
+.idiv input{
+    text-indent:26px;
+    width:350px;
+    height:45px;
+    border:1px solid #cccccc;
+    outline:none;
+}
+.abn{
+    color:#fff;
+    font-size:22px;
+    background:#43a41b;
+    display:block;
+    width:350px;
+    height:44px;
+    text-align:center;
+    line-height:44px;
+    margin-top:20px;
+}
+.idiv label{
+    padding:0 20px;
+    border:1px solid #ff8080;
+    color:#ff8080;
+    background:#fee6e7;
+    display:block;
     }
-    p{
-        float:left;
-        display:block;
-        width:200px;
-        height:20px;
-    }
+    .btna{
+    padding:14px 10px;
+    display:inline-block;
+    margin-left:30px;
+    background:#43a41b;
+    font-size:16px;
+    color:#fff;
+
+}
+#phone{
+    width:194px;
+    margin-bottom:20px;
+
+}
+#radiod{
+    width:16px;
+    height:16px;
+    margin-right:10px;
 }

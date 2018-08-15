@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<link rel="stylesheet" href="style/land.css" />
+		<link rel="stylesheet" href="//at.alicdn.com/t/font_679177_lxu5nlszo5p.css" />
 	</head>
 	<body>
 		<div class="container">
@@ -13,13 +14,76 @@
 				</a>
 				
 			</div>
-			<img data-order="1" src="https://passport.womai.com/upload/2018/7/23/20180723093425275.jpg" width="1000" height="500" alt="" border="0">
+			<div class="bav">
+				<img data-order="1" src="https://passport.womai.com/upload/2018/7/23/20180723093425275.jpg" width="1250" height="625" alt="" border="0">
+			</div>
+			<div class="mav">
+				<h3>请登录中粮我买网</h3>
+				
+				<p>
+					<label for="usr" style="visibility:hidden">用户名不能为空</label>
+					<input type="text" id="usr" placeholder="用户名" /><em>x</em>
+				</p>
+				<p>
+					<label for="pwd" style="visibility:hidden">密码不能为空</label>
+					<input type="password" id="pwd" placeholder="密码"/>
+				</p>
+				<p>
+					<b>登陆</b><a href="register.html">注册</a>
+				</p>
+				<ul>
+					<p>使用合作伙伴账号登陆我买网</p>
+					<li><i class="iconfont icon-social-qq"></i>&nbsp;&nbsp;QQ</li>
+					<li><i class="iconfont icon-renrenwang"></i>&nbsp;&nbsp;人人网</li>
+					<li><i class="iconfont icon-jingdiananli_kongwujiaoxing_shoucang"></i>&nbsp;&nbsp;开心网</li>
+					<li><i class="iconfont icon-zhifubaofukuan"></i>&nbsp;&nbsp;支付宝</li>
+					<li><i class="iconfont icon-unie653"></i>&nbsp;&nbsp;新浪微博</li>
+					<li><i class="iconfont icon-icon_baidulogo"></i>&nbsp;&nbsp;百度</li>
+					<li><i class="iconfont icon-zhongguojiansheyinhang1"></i>&nbsp;&nbsp;建行</li>
+					<li><i class="iconfont icon-zengzhifuwu"></i>&nbsp;&nbsp;什么值的买</li>
+					<li><i class="iconfont icon-baoxianchanpin"></i>&nbsp;&nbsp;中英人寿</li>
+				</ul>
+			</div>
 		</div>
-		<div class="mav">
-			<h3>请登录中粮我买网</h3>
-			<input type="text" id="usr"/>
-			<input type="password" id="pwd"/>
-			<button>登陆</button>
-		</div>
+		
+		
 	</body>
 </html>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
+<script>
+	// 根据元素找到对应的ID 
+	
+	// 当输入框失去焦点
+	$("#usr").blur(function(){	
+		var attrString = this.id;
+		var selectString=$("label[for="+attrString+"]");
+		// 判断 元素是不是为空
+		if($(this).val().length == 0){			
+			selectString.css({
+				"visibility":"visible" 
+			})		
+		}else{
+			selectString.css({
+				"visibility":"hidden"
+			})
+		}	
+	})
+	$("#pwd").blur(function(){
+		var attrString = this.id;
+		var selectString=$("label[for="+attrString+"]");
+		// 判断 元素是不是为空
+		if($(this).val() == ""){
+			selectString.css({
+				"visibility":"visible" 
+			})		
+		}else{
+			selectString.css({
+				"visibility":"hidden"
+			})
+		}	
+	})
+	// 点击X ，清除文本框内容
+	$("em").click(function(){
+		$("#usr").val("");
+	})
+</script>
